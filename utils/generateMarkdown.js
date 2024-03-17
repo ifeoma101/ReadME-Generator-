@@ -10,7 +10,7 @@ function generateMarkdown(data) {
   [Contributors](#contributors)
   [Testing](#testing)
 ## Description
-${data.description}
+${data.description} 
 ## Requirements 
 ${data.requirements}
 ## Usage
