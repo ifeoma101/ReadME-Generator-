@@ -17,7 +17,7 @@ const questions = [
 },
 {
     type:"checkbox",
-    name: "licence",
+    name: "license",
     messgae: "Please select the license applicable to you project.",
     choices: ["none", ""]
 },
@@ -35,11 +35,6 @@ const questions = [
     type:"input",
     name: "creator",
     messgae: "Please write your GitHub username.",
-},
-{
-    type:"input",
-    name: "name",
-    messgae: "Please state the languages or technologies used in this project.",
 },
 {
     type:"input",
@@ -72,6 +67,10 @@ function writeToFile(fileName, data) {
 
 // function to initialize program
 function init() {
+    inquirer.prompt(questions).then((responses) => {
+        console.log("Creating Professional README.md File");
+        writeToFile("./dist/README.md", generateMarkdown({...responses }));
+    });
 
 }
 
