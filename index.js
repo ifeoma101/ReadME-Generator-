@@ -67,6 +67,7 @@ const questions = [
 
 // function to write README file
 function writeToFile(fileName, data) {
+    return fs.writeFilesync(path.join(process.cwd(), filename, data));
 }
 
 // function to initialize program
